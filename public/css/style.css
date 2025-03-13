@@ -1,0 +1,81 @@
+body{
+    font-size: 17px;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#FF6500,#0B192C);
+}
+
+.container{
+    color: #FF6500;
+    width: 40rem;
+    margin: 8rem 0rem 8rem 0rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.header-text{
+    text-decoration: solid;
+    margin-top: 4rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#email{
+    border-radius: 0.1rem;
+    margin-top: 4rem;
+    width: 330px;
+    height: 75px;
+    font-size: 25px;
+    border: 0;   
+    background-color: #FF6500;
+    font-family: "Poppins";
+}
+#email:focus{
+    border: 0;
+    outline: 0;
+}
+#email::placeholder{
+    color: #0B192C;
+    opacity: 0.5;
+}
+#password{
+    border-radius: 0.1rem;
+    margin-top: 0.8rem;
+    width: 330px;
+    height: 75px;
+    font-size: 25px;
+    border: 0;
+    background-color: #FF6500;
+    font-family: "Poppins";
+}
+#password:focus{
+    border: 0;
+    outline: 0;
+}
+#password::placeholder{
+    color: #0B192C;
+    opacity: 0.5;
+}
+
+.login-btn{
+    width: 330px;
+    height: 75px;
+    margin-top: 7rem;
+    font-size: 27px;
+    background-color: #FF6500;
+    color: #0B192C;
+    border: 0;
+    outline: 0;
+    font-family: "Poppins";
+    border-radius: 0.1rem;
+}
+.login-btn:hover{
+    cursor:pointer;
+    background-color: #e05b01;
+}

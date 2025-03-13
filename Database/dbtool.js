@@ -7,7 +7,9 @@ const db = new sqlite3.Database("./test.db" , sqlite3.OPEN_READWRITE , (err)=>{
 });
 
 //make a user table
-sql = `CREATE TABLE users(id INTIGER PRIMARY KEY , username , password , email)` ;
-db.run(sql , (err)=>{
-    if(err) return console.log(err.message );
-});
+// sql = `CREATE TABLE users(id INTIGER PRIMARY KEY , username , password , email)` ;
+// db.run(sql , (err)=>{
+//     if(err) return console.log(err.message );
+// });
+
+

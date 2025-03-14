@@ -3,11 +3,11 @@ body{
     font-family: "Poppins";
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(#FF6500,#0B192C);
+    background-image: radial-gradient(#FFFAE6,#002379);
 }
 
 .container{
-    color: #FF6500;
+    color: #FF9F66;
     width: 40rem;
     margin: 8rem 0rem 8rem 0rem;
     background-color: white;
@@ -21,61 +21,79 @@ body{
 
 .header-text{
     text-decoration: solid;
-    margin-top: 4rem;
     font-size: 3rem;
     text-align: center;
+    margin-top: 4rem;
+}
+
+.forms{
+    margin-top: 4rem;
 }
 
 #email{
-    border-radius: 0.1rem;
-    margin-top: 4rem;
+    border-radius: 6px;
     width: 330px;
     height: 75px;
+    padding-left: 33px;
+    margin-top: 0.8rem;
     font-size: 25px;
     border: 0;   
-    background-color: #FF6500;
+    background: url("mail.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
     font-family: "Poppins";
+    transition: background-color 0.7s;
 }
 #email:focus{
     border: 0;
     outline: 0;
+    background-color: rgb(199, 85, 10);
 }
 #email::placeholder{
     color: #0B192C;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 #password{
-    border-radius: 0.1rem;
-    margin-top: 0.8rem;
+    border-radius: 6px;
     width: 330px;
     height: 75px;
+    padding-left: 33px;
+    margin-top: 0.8rem;
     font-size: 25px;
     border: 0;
-    background-color: #FF6500;
+    background: url("pass.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
     font-family: "Poppins";
+    transition: background-color 0.7s;
 }
 #password:focus{
     border: 0;
     outline: 0;
+    background-color: rgb(199, 85, 10);
 }
 #password::placeholder{
     color: #0B192C;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .login-btn{
     width: 330px;
     height: 75px;
-    margin-top: 7rem;
+    margin-top: 110px;
     font-size: 27px;
-    background-color: #FF6500;
+    background-color: #FF5F00;
     color: #0B192C;
     border: 0;
     outline: 0;
     font-family: "Poppins";
-    border-radius: 0.1rem;
+    border-radius: 6px;
+    transition: background-color 0.7s;
 }
 .login-btn:hover{
     cursor:pointer;
-    background-color: #e05b01;
+    background-color: rgb(199, 85, 10);
+    animation-name: focus;
 }

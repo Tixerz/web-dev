@@ -1,0 +1,144 @@
+body{
+    font-size: 17px;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(#FFFAE6,#002379);
+}
+
+.container{
+    color: #FF9F66;
+    width: 40rem;
+    margin: 8rem 0rem 8rem 0rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.header-text{
+    text-decoration: solid;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+#email{
+    border-radius: 6px;
+    width: 330px;
+    height: 75px;
+    padding-left: 33px;
+    margin-top: 0.8rem;
+    font-size: 25px;
+    border: 0;   
+    background: url("mail.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
+    font-family: "Poppins";
+    transition: background-color 0.7s;
+}
+#email:focus{
+    border: 0;
+    outline: 0;
+    background-color: rgb(199, 85, 10);
+}
+#email::placeholder{
+    color: #0B192C;
+    opacity: 0.3;
+}
+#username{
+    border-radius: 6px;
+    width: 330px;
+    padding-left: 33px;
+    height: 75px;
+    margin-top: 0.8rem;
+    font-size: 25px;
+    border: 0;   
+    background: url("user.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
+    font-family: "Poppins";
+    transition: background-color 0.7s;
+}
+#username:focus{
+    border: 0;
+    outline: 0;
+    background-color: rgb(199, 85, 10);
+}
+
+#username::placeholder{
+    color: #0B192C;
+    opacity: 0.3;
+}
+#password{
+    border-radius: 6px;
+    width: 330px;
+    height: 75px;
+    padding-left: 33px;
+    margin-top: 0.8rem;
+    font-size: 25px;
+    border: 0;
+    background: url("pass.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
+    font-family: "Poppins";
+    transition: background-color 0.7s;
+}
+#password:focus{
+    border: 0;
+    outline: 0;
+    background-color: rgb(199, 85, 10);
+}
+#password::placeholder{
+    color: #0B192C;
+    opacity: 0.3;
+}
+#repeat-password{
+    border-radius: 6px;
+    width: 330px;
+    height: 75px;
+    padding-left: 33px;
+    margin-top: 0.8rem;
+    margin-bottom: 32px;
+    font-size: 25px;
+    border: 0;
+    background: url("pass.png") no-repeat left;
+    background-size: 25px;
+    background-color: #FF5F00;
+    background-blend-mode: difference;
+    font-family: "Poppins";
+    transition: background-color 0.7s;
+}
+#repeat-password:focus{
+    border: 0;
+    outline: 0;
+    background-color: rgb(199, 85, 10);
+}
+#repeat-password::placeholder{
+    color: #0B192C;
+    opacity: 0.3;
+}
+
+.login-btn{
+    width: 330px;
+    height: 75px;
+    margin-top: 12px;
+    font-size: 27px;
+    background-color: #FF5F00;
+    color: #0B192C;
+    border: 0;
+    outline: 0;
+    font-family: "Poppins";
+    border-radius: 6px;
+    transition: background-color 0.7s;
+}
+.login-btn:hover{
+    cursor:pointer;
+    background-color: rgb(199, 85, 10);
+    animation-name: focus;
+}

@@ -54,21 +54,23 @@ function delete_user(db_string , id){
 }
 
 
-function search_user(db_string , username){
-    let db = new sqlite3.Database(db_string , sqlite3.OPEN_READWRITE , (err) => {
-        if(err) return console.log(err.message);
-    });
-    db.get(`SELECT * FROM users WHERE username = ?  ` , [username] , (err , row)=>{
-        if(err) throw err;
-        if(row){
-            console.log(row); 
-            db.close();
-            return row;
-        }else{
-            console.log("no user found");
-            db.close();
-            return row;
-        }
+function  search_user(db_string , username){
+    return new Promise((resolve , reject) => {
+        let db = new sqlite3.Database(db_string , sqlite3.OPEN_READWRITE , (err) => {
+            if(err) return console.log(err.message);
+        });
+        db.get(`SELECT * FROM users WHERE username = ?  ` , [username] , (err , row)=>{
+            if(err) throw err;
+            if(row){
+                console.log(row); 
+                db.close();
+                resolve(row);
+            }else{
+                console.log("no user found");
+                db.close();
+                reject(row);
+            }
+        });
     });
 }
 
@@ -77,4 +79,3 @@ module.exports = {
     search_user , 
     delete_user
 }
-

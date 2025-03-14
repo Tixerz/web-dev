@@ -21,18 +21,21 @@ app.get('/' , (req, res)=>{
 
 app.post('/login' , (req , res) => {
     console.log(JSON.stringify(req.body));
+    
+    
     search_user("./Database/test.db",req.body.email).then(data=>{
         
         return data;
-        
+            
     }).then(js => {
-        
+            
         if(js.password === req.body.password){
             res.send({status:`true `});
         }else{
-            res.send({status:`false $`});
-        }
-    });
+             res.send({status:`false`});
+         }
+    }).catch(error=>{res.send({status:"user doesnt exist"})});
+    
      
     
     // if(search_user("./Database/test.db" , JSON.stringify(req.body).email).password === JSON.stringify(req.body).password){

@@ -1,4 +1,5 @@
 const sqlite3 = require('sqlite3');
+const bcrypt = require('bcrypt');
 let sql;
 
 //connect the db to the file
@@ -30,10 +31,12 @@ function drop_table(db_string , table){
     db.close();
 }
 
-function add_user(db_string , username , password , email){
+async function add_user(db_string , username , password , email){
+    password = await bcrypt.hash(password ,10);
     let db = new sqlite3.Database(db_string , sqlite3.OPEN_READWRITE , (err) => {
         if(err) return console.log(err.message);
     });
+
     db.run(`INSERT INTO users (username , password , email) VALUES (? ,? ,? )` , [username , password , email] , err=>{
         if(err) return console.log(err.message);
         console.log(`created the user ${username}`);
@@ -73,6 +76,8 @@ function  search_user(db_string , username){
         });
     });
 }
+
+
 
 module.exports = {
     add_user ,

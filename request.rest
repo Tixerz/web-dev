@@ -1,0 +1,13 @@
+POST http://localhost:3000/genjwt 
+Content-Type: application/json
+
+{
+    "username": "admin" ,
+    "password" : "aaaa" , 
+    "email" : "owiehfihf"
+}
+
+
+###
+GET  http://localhost:3000/email
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJhYWFhIiwiZW1haWwiOiJvd2llaGZpaGYiLCJpYXQiOjE3NDE5ODY2ODZ9.7G8YkoaxlSQGvqBzKMYcAS4l15G0lrgWBMOrivNArXE

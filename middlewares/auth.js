@@ -14,4 +14,9 @@ function authToken(req , res , next){
         next();
     });
 }
-module.exports ={authToken};
+
+function genToken(user){
+    const token = jwt.sign(user , process.env.JWT_SECRET_KEY);
+    return token;
+}
+module.exports ={authToken , genToken};

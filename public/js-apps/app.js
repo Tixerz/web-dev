@@ -1,6 +1,6 @@
-let input1 = document.getElementById("input1");
-let input2 = document.getElementById("input2");
-let btn = document.getElementById("btn");
+let input1 = document.getElementById("username");
+let input2 = document.getElementById("password");
+let btn = document.getElementById("login-btn");
 
 function send_data(){
     let buffer = {
@@ -15,8 +15,18 @@ function send_data(){
         body: JSON.stringify(buffer)
     }).then(res => {
         return res.json();
-    }).then(data => {
-        window.alert(data.status);
-    });
+    }).then(data =>{
+        if(data.status == "true"){
+            try{
+                sessionStorage.setItem("token" , data.token);
+                window.location.replace("http://127.0.0.1:3000/dashbord");
+            }catch{
+                console.log("something went wrong with saving the token inside the browser")
+            }
+        }else{
+            //show error
+            window.alert("username/password is incorrect");
+        }
+    })
 }
 btn.addEventListener('click' , send_data);

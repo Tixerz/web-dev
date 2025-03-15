@@ -21,8 +21,10 @@ app.use(express.static(path.join(__dirname , 'public')));
 
 app.get('/' , (req, res)=>{
     res.sendFile(path.join(__dirname , 'public' , 'html-pages' ,'Login', 'login.html'));
+});
+app.get('/signup' , (req, res) => {
+    res.sendFile(path.join(__dirname , 'public' , 'html-pages' , 'Sign up','sign-up.html'));
 })
-
 //entry point for logging in
 app.post('/login' , async (req , res) => {
     try{
@@ -36,7 +38,7 @@ app.post('/login' , async (req , res) => {
             res.send({status:"false"});
         }
     }catch{
-        res.status(500).send();
+        res.send({status:"false"});
     }
     
 });

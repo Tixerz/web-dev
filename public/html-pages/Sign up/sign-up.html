@@ -9,19 +9,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 </head>
 <body>
-    <div class="container" style="background-color: #002379;">
+    <div class="container">
         <h1 class="header-text">SIGN UP</h1>
         <div class="forms">
-            <form action="">
-                <input type="text" name="email" id="email" placeholder="Email">
-                <br>
-                <input type="text" name="Uusername" id="username" placeholder="Username">
-                <br>
-                <input type="text" name="password" id="password" placeholder="Password" style="color: #1E3E62;">
-                <br>
-                <input type="text" name="repeat-password" id="repeat-password" placeholder="Repeat Password" style="color: #1E3E62;">
-                <br>
-                <input class="login-btn" type="button" value="SUBMIT">
+            <form action="" class="form">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+           
+                <input type="text" name="Uusername" id="username" placeholder="Username" required>
+   
+                <input type="password" name="password" id="password" placeholder="Password" style="color: #1E3E62;" required>
+
+                <input type="password" name="repeat-password" id="repeat-password" placeholder="Repeat Password" style="color: #1E3E62;" required>
+
+                <div class="check-box">
+                    <input type="checkbox" name="show-password" id="show-password">
+                    <label for="show-password">Show Password</label>
+                </div>
+                <input class="login-btn" type="submit" value="SUBMIT">
             </form>
         </div>
     </div>

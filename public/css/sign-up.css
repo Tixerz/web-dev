@@ -241,3 +241,107 @@ body{
         background-position: 0% 0%;
     }
 }
+/* Media Queries */
+
+@media (max-width: 1440px) {
+    .container{
+        margin-top: 4.8rem;
+        margin-bottom: 0px;
+        height: 45rem;
+    }
+    .header-text{
+        font-size: 2.7rem;
+    }
+    .login-btn{
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 34rem;
+        height: 39rem;
+        margin-top: 7.5rem;
+        margin-bottom: 0px;
+    }
+    .header-text{
+        font-size: 2.5rem;
+    }
+    #email {
+        width: 280px;
+        height: 55px;
+        margin-left: 1.7rem;
+        font-size: 20px;
+    }
+    #username {
+        width: 280px;
+        height: 55px;
+        margin-left: 1.7rem;
+        font-size: 20px;
+    }
+    #password {
+        width: 280px;
+        height: 55px;
+        margin-left: 1.7rem;
+        font-size: 20px;
+    }
+    #repeat-password {
+        width: 280px;
+        height: 55px;
+        margin-left: 1.7rem;
+        font-size: 20px;
+    }
+    .check-box {
+        margin-left: 1.7rem;
+    }
+    .login-btn{
+        width: 280px;
+        height: 55px;
+        margin-left: 1.7rem;
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .container{
+        width: 20rem;
+        height: 35rem;
+    }
+    .header-text{
+        font-size: 2.3rem;
+    }
+    #email {
+        width: 230px;
+        height: 45px;
+        margin-left: 1rem;
+        font-size: 17px;
+    }
+    #username {
+        width: 230px;
+        height: 45px;
+        margin-left: 1rem;
+        font-size: 17px;
+    }
+    #password {
+        width: 230px;
+        height: 45px;
+        margin-left: 1rem;
+        font-size: 17px;
+    }
+    #repeat-password {
+        width: 230px;
+        height: 45px;
+        margin-left: 1rem;
+        font-size: 17px;
+    }      
+    .check-box {
+        margin-left: 1rem;
+    }
+    .login-btn{
+        width: 230px;
+        height: 45px;
+        margin-left: 1rem;
+        font-size: 17px;
+    }
+}

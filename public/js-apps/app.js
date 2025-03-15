@@ -4,7 +4,7 @@ let btn = document.getElementById("btn");
 
 function send_data(){
     let buffer = {
-        email : input1.value , 
+        username : input1.value , 
         password : input2.value
     };
     fetch("http://127.0.0.1:3000/login" , {

@@ -1,0 +1,63 @@
+body {
+    font-family: "Poppins";
+    font-size: 17px;
+    margin-top: 0px;
+    margin-right: 18rem;
+    margin-left: 18rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.header-right_text {
+    display: flex;
+}
+
+.user-logo {
+    width: 37px;
+    height: 37px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search  {
+    margin: 9rem 0rem 3rem 0rem;
+}
+.search-todos {
+    font-size: 20px;
+    width: 400px;
+    height: 60px;
+    background-color: blue;
+    border: none;
+}
+.todo {
+    width: 400px;
+    height: 60px;
+    background-color: blue;
+    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.todo-delete {
+    width: 40px;
+    height: 40px;
+
+}
+.button {
+    margin-top: 3rem;
+}
+.submit-btn {
+    width: 400px;
+    height: 60px;
+}

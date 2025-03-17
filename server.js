@@ -14,64 +14,20 @@ const app = express();
 
 //middleware
 app.use(express.json());
-
-
 app.use(express.static(path.join(__dirname, 'public')));
 
+//routes
+const signupRoute = require('./routes/signup.js');
+const loginRoute = require('./routes/login.js');
+const dashbordRoute = require('./routes/dashboard');
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'html-pages', 'Login', 'login.html'));
-});
+app.use('/signup' ,signupRoute );
+app.use('/login' ,loginRoute );
+app.use('/dashbord' , dashbordRoute);
 
-app.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'html-pages', 'Sign up', 'sign-up.html'));
-});
-app.post('/signup', async (req, res) => {
-  let user;
-  await search_user("./Database/test.db", req.body.username).then(data => {
-    user = data;
-  }).catch(data => { user = data; });
 
-  if (user == undefined) {
-    //if username was available
-    await add_user("./Database/test.db", req.body.username, req.body.password, " ");
-    res.send({ status: "true" });
-  } else {
-    //if its not awvailable
-    res.send({ status: "false" });
-  }
-});
-//entry point for logging in
-app.post('/login', async (req, res) => {
-  try {
-    console.log(req.body.username);
-    let user = await search_user("./Database/test.db", req.body.username);
 
-    if (await bycrypt.compare(req.body.password, user.password)) {
 
-      res.send({ status: `true`, token: genToken(req.body.username) });
-    } else {
-      res.send({ status: "false" });
-    }
-  } catch {
-    res.send({ status: "false" });
-  }
-
-});
-app.get('/dashbord', authToken, (req, res) => {
-  res.sendStatus(200);
-});
-//gen a jwt 
-// app.post('/genjwt' , (req , res)=> {
-//     const tokenSec = process.env.JWT_SECRET_KEY;
-//     let data = {
-//         username : req.body.username , 
-//         password  : req.body.password , 
-//         email : req.body.email
-//     };
-//     const token = jwt.sign(data , tokenSec); 
-//     res.send({token});
-// })
 
 app.listen(PORT, "127.0.0.1", (err) => {
   if (err) return console.log("Failed to run the server");

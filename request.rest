@@ -1,8 +1,8 @@
-POST http://localhost:3000/login
+POST http://127.0.0.1:3000/login
 Content-Type: application/json
 
 {
-    "username": "banana" ,
+    "username": "banana3" ,
     "password" : "banana123" 
     
 }
@@ -13,6 +13,6 @@ POST http://127.0.0.1:3000/signup
 Content-Type: application/json
 
 {
-    "username" : "banana",
+    "username" : "banana3",
     "password" : "banana123"
 }
